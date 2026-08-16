@@ -1,5 +1,7 @@
 # seekwhale-on-dsh
 
+English | [中文](README.zh.md)
+
 ![SeekWhale on DSH](docs/social-preview.png)
 
 A DeepSeek Harness plugin: the DeepSeek whale, pixel-animated, floating in the
@@ -88,13 +90,16 @@ node build.mjs        # src/client.js + assets/ → lib/client.js
 No compiler, and that is on purpose. DSH serves a plugin's browser half as **one
 file** that calls `window.__ModuleLoader__.load({ id, factory })` and pulls shared
 deps from the loader's `require` shim — not as an ES module. Nothing about that
-needs a bundler, so `build.mjs` concatenates: it inlines the SVGs as data URIs,
-wraps `src/client.js` in the envelope, and writes `lib/client.js`.
+needs a bundler, so `build.mjs` concatenates: it inlines the art, wraps
+`src/client.js` in the envelope, and writes `lib/client.js`.
 
 The art is inlined rather than fetched because **only `lib/client.js` is
 addressable** — the host serves that path, not the package directory, so a sibling
-`assets/` would 404 in the browser. Serving each state as its own `<img>` document
-also keeps the SVGs' CSS from colliding.
+`assets/` would 404 in the browser. It goes in **gzipped**: these SVGs are one long
+run of near-identical path and keyframe text and deflate about 8.7x, which is what
+makes fifteen states fit in 310 KB instead of 2 MB. The browser inflates each one
+on first use with `DecompressionStream` and hands it to an `<img>` as a blob URL —
+its own document, so their CSS never meets.
 
 `lib/client.js` is committed: consumers install this package and DSH reads the file
 straight off disk.
@@ -104,7 +109,7 @@ straight off disk.
 ```
 src/client.js   the plugin — plain readable JS, no build magic
 build.mjs       inlines assets and wraps src into DSH's bundle envelope
-assets/         the six SVGs it uses
+assets/         the 14 SVGs it uses (several states share one file)
 lib/index.js    host half: an empty apply(), so the entry appears in the tree —
                 which is what makes DSH read dsh.client and serve the browser half
 lib/client.js   built artifact
