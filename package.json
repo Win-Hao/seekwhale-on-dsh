@@ -1,6 +1,6 @@
 {
   "name": "seekwhale-on-dsh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SeekWhale — the DeepSeek pixel whale as a DSH web overlay pet.",
   "keywords": [
     "dsh",
