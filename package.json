@@ -36,7 +36,7 @@
     "build.mjs",
     "cordis.patch.yml",
     "README.md",
-    "README.zh.md"
+    "README.en.md"
   ],
   "dsh": {
     "client": {
