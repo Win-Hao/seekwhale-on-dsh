@@ -5,11 +5,13 @@
 A DeepSeek Harness plugin: the DeepSeek whale, pixel-animated, floating in the
 corner of `dsh web` and reacting to your sessions.
 
-<img src="docs/demo.gif" width="220" align="right" alt="the whale cycling through its states">
-
 The whale is the DeepSeek logo pixelated onto a **40×31 grid** and animated
 frame-by-frame. Every state is a **single SVG carrying its own CSS keyframes** — no
 GIF, no APNG, no script — so it stays sharp at any size and survives any sanitizer.
+
+<p align="center">
+  <img src="docs/demo.gif" width="240" alt="the whale idling, working, startling, celebrating, drinking coffee and falling asleep">
+</p>
 
 ## Install
 
@@ -47,8 +49,6 @@ exactly this, additive and click-through — and reads the session snapshot.
 
 One whale for the whole window, not one per session, and urgency wins: being asked
 outranks work in flight, which outranks a finished turn nobody has looked at.
-
-<br clear="right">
 
 ![every state](docs/states.png)
 
