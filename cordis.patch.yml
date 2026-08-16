@@ -1,0 +1,8 @@
+# Applied automatically as this package's bundle layer, so installing it is the
+# whole install — no hand-editing of the profile's own patch file.
+#
+# The node half is an empty apply(); its only job is to appear in the plugin tree,
+# because that is what makes the host read `dsh.client` and serve the browser half.
+- insert:
+    - id: seekwhale
+      name: seekwhale-on-dsh

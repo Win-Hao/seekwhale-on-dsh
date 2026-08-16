@@ -1,0 +1,58 @@
+{
+  "name": "seekwhale-on-dsh",
+  "version": "0.1.0",
+  "description": "SeekWhale — the DeepSeek pixel whale as a DSH web overlay pet.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "desktop-pet",
+    "pixel-art",
+    "deepseek"
+  ],
+  "homepage": "https://github.com/Win-Hao/seekwhale-on-dsh#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Win-Hao/seekwhale-on-dsh.git"
+  },
+  "author": "huangyonghao",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "src",
+    "assets",
+    "build.mjs",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime"
+      ],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-client-runtime": "*",
+    "@deepseek-ai/dsh-client-ui-slots": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/Win-Hao/seekwhale-on-dsh/issues"
+  }
+}
