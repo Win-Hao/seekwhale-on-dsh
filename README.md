@@ -52,7 +52,19 @@ exactly this, additive and click-through — and reads the session snapshot.
 One whale for the whole window, not one per session, and urgency wins: being asked
 outranks work in flight, which outranks a finished turn nobody has looked at.
 
-![every state](docs/states.png)
+Every one of them, looping:
+
+| approval | question | review | working | swarm |
+|:--:|:--:|:--:|:--:|:--:|
+| ![approval](docs/states/approval.gif) | ![question](docs/states/question.gif) | ![review](docs/states/review.gif) | ![working](docs/states/working.gif) | ![swarm](docs/states/swarm.gif) |
+
+| done | idle | read | coffee | yawn |
+|:--:|:--:|:--:|:--:|:--:|
+| ![done](docs/states/done.gif) | ![idle](docs/states/idle.gif) | ![read](docs/states/read.gif) | ![coffee](docs/states/coffee.gif) | ![yawn](docs/states/yawn.gif) |
+
+| spout | sleeping | carrying | poke | annoyed |
+|:--:|:--:|:--:|:--:|:--:|
+| ![spout](docs/states/spout.gif) | ![sleeping](docs/states/sleeping.gif) | ![carrying](docs/states/carrying.gif) | ![poke](docs/states/poke.gif) | ![annoyed](docs/states/annoyed.gif) |
 
 Two things are not in the snapshot and come from a clock instead. **Sleep**, because
 "nothing has happened" is not an event. And the **idle flourishes** — a whale that

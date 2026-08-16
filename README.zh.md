@@ -50,7 +50,19 @@ dsh web
 **一整个窗口只有一只鲸鱼**，不是一个会话一只；而且急事压过进度 —— 被问话压过还在跑的活，
 还在跑的活压过没人去看的完成。
 
-![全部状态](docs/states.png)
+全部状态，各自循环：
+
+| approval | question | review | working | swarm |
+|:--:|:--:|:--:|:--:|:--:|
+| ![approval](docs/states/approval.gif) | ![question](docs/states/question.gif) | ![review](docs/states/review.gif) | ![working](docs/states/working.gif) | ![swarm](docs/states/swarm.gif) |
+
+| done | idle | read | coffee | yawn |
+|:--:|:--:|:--:|:--:|:--:|
+| ![done](docs/states/done.gif) | ![idle](docs/states/idle.gif) | ![read](docs/states/read.gif) | ![coffee](docs/states/coffee.gif) | ![yawn](docs/states/yawn.gif) |
+
+| spout | sleeping | carrying | poke | annoyed |
+|:--:|:--:|:--:|:--:|:--:|
+| ![spout](docs/states/spout.gif) | ![sleeping](docs/states/sleeping.gif) | ![carrying](docs/states/carrying.gif) | ![poke](docs/states/poke.gif) | ![annoyed](docs/states/annoyed.gif) |
 
 有两件事不在快照里，只能靠计时器。一是**睡觉** —— 「什么都没发生」不是一个事件。
 二是**待机花活** —— 一只在你不干活的那三分之二时间里只会干悬着的鲸鱼是最无聊的桌宠，
