@@ -1,5 +1,5 @@
 /**
- * SeekWhale — browser half.
+ * Seek — browser half.
  *
  * This is the real source. It used to live as a template string inside the build
  * script, which meant every backtick and every `${` in a comment was a live grenade
@@ -23,7 +23,7 @@ export function createPlugin(React, BLOB, ART, F, POOL, POKES) {
   /** Box the pet occupies; the SVG canvas is larger and overhangs it. */
   const BOX = 132;
   const SLEEP_AFTER = 90000;
-  const SPOT = "seekwhale:spot";
+  const SPOT = "seek:spot";
 
   /**
    * Alt-click cycle. Four of these states need real agent activity to appear —
@@ -91,7 +91,7 @@ export function createPlugin(React, BLOB, ART, F, POOL, POKES) {
     return { right: 16, bottom: 16 };
   }
 
-  function SeekWhale({ useSessions }) {
+  function Seek({ useSessions }) {
     const live = useSessions(pick);
     const [drowsy, setDrowsy] = React.useState(false);
     const [spot, setSpot] = React.useState(restore);
@@ -222,9 +222,9 @@ export function createPlugin(React, BLOB, ART, F, POOL, POKES) {
     }, [held, spot]);
 
     return React.createElement("div", {
-      "data-seekwhale": state,
-      "data-seekwhale-pinned": pinned || undefined,
-      title: pinned ? ("SeekWhale: " + pinned + " (pinned — alt-click to step)") : "SeekWhale",
+      "data-seek": state,
+      "data-seek-pinned": pinned || undefined,
+      title: pinned ? ("Seek: " + pinned + " (pinned — alt-click to step)") : "Seek",
       ref: box,
       style: {
         position: "absolute", right: spot.right, bottom: spot.bottom,
@@ -256,7 +256,7 @@ export function createPlugin(React, BLOB, ART, F, POOL, POKES) {
       // transform as the art. Sized to the animal, not to its canvas.
       React.createElement("div", {
         key: "grip",
-        "data-seekwhale-grip": "",
+        "data-seek-grip": "",
         onPointerDown: onDown,
         onPointerMove: onMove,
         onPointerUp: onUp,
@@ -285,10 +285,10 @@ export function createPlugin(React, BLOB, ART, F, POOL, POKES) {
   function apply(ctx) {
     ctx.slots.inject("shell.overlay", () => ctx.slots.register({
       name: "shell.overlay",
-      id: "seekwhale",
+      id: "seek",
       order: 50,
-      label: "SeekWhale",
-    }, SeekWhale));
+      label: "Seek",
+    }, Seek));
   }
 
   return { apply, inject: ["sessions", "slots"] };

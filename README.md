@@ -1,8 +1,8 @@
-# seekwhale-on-dsh
+# seek-on-dsh
 
 中文 | [English](README.en.md)
 
-![SeekWhale on DSH](docs/social-preview.png)
+![Seek on DSH](docs/social-preview.png)
 
 一个 DeepSeek Harness 插件：像素化的 DeepSeek 小鲸鱼浮在 `dsh web` 右下角，
 跟着你的会话状态做反应。
@@ -18,7 +18,7 @@
 ## 安装
 
 ```sh
-dsh plugin --profile web add seekwhale-on-dsh
+dsh plugin --profile web add seek-on-dsh
 dsh web
 ```
 
@@ -76,7 +76,7 @@ dsh web
 - **戳它。** 点一下会一惊；1.8 秒内继续戳它就生气了。生气这一档是 `error` 那张美术
   **唯一**的出场机会 —— 会话快照只说一轮停了，从不说它失败了。
 - **拖它。** 拖到任意位置，拖动时放驮东西的姿势，松手记住位置
-  （`localStorage`，键 `seekwhale:spot`）。拖不算戳：指针移动没超过 4px、
+  （`localStorage`，键 `seek:spot`）。拖不算戳：指针移动没超过 4px、
   且 500ms 内松手，才算一次点击。
 - **Alt + 点击**逐个切换全部状态再回到实时，这样不用真去等一个权限弹窗才能看到美术。
   钉住时状态名会显示在鲸鱼头顶。

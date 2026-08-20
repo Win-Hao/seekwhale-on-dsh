@@ -1,8 +1,8 @@
-# seekwhale-on-dsh
+# seek-on-dsh
 
 English | [中文](README.md)
 
-![SeekWhale on DSH](docs/social-preview.png)
+![Seek on DSH](docs/social-preview.png)
 
 A DeepSeek Harness plugin: the DeepSeek whale, pixel-animated, floating in the
 corner of `dsh web` and reacting to your sessions.
@@ -18,7 +18,7 @@ GIF, no APNG, no script — so it stays sharp at any size and survives any sanit
 ## Install
 
 ```sh
-dsh plugin --profile web add seekwhale-on-dsh
+dsh plugin --profile web add seek-on-dsh
 dsh web
 ```
 
@@ -82,7 +82,7 @@ with no web equivalent.
   annoyed. That second tier is the only way `error` art can ever appear — nothing in
   the session snapshot says "this failed".
 - **Drag it** anywhere; it plays its carrying pose while held and remembers where you
-  dropped it (`localStorage`, key `seekwhale:spot`). A drag is not a poke: the click
+  dropped it (`localStorage`, key `seek:spot`). A drag is not a poke: the click
   only counts if the pointer stayed within 4px and let go inside 500ms.
 - **Alt-click** steps through every state and back to live, so you can look at the
   art without waiting for a real permission prompt. The pinned state is labelled

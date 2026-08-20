@@ -30,25 +30,25 @@ const HERE = fileURLToPath(new URL("./", import.meta.url));
  */
 export const STATES = {
   // ── driven by the session snapshot ──
-  idle: "seekwhale-idle-follow.svg",
-  working: "seekwhale-working-typing.svg",   // one turn in flight
-  swarm: "seekwhale-working-terminal.svg",   // two or more at once
-  approval: "seekwhale-notification.svg",    // pendingInteraction 'approval'
-  question: "seekwhale-thinking.svg",        // pendingInteraction 'question'
-  review: "seekwhale-idle-chart.svg",        // pendingInteraction 'plan-review'
-  done: "seekwhale-attention.svg",           // completed unseen — celebrate
-  sleeping: "seekwhale-sleeping.svg",
-  carrying: "seekwhale-carrying.svg",        // held; the theme's reactions.drag art
+  idle: "seek-idle-follow.svg",
+  working: "seek-working-typing.svg",   // one turn in flight
+  swarm: "seek-working-terminal.svg",   // two or more at once
+  approval: "seek-notification.svg",    // pendingInteraction 'approval'
+  question: "seek-thinking.svg",        // pendingInteraction 'question'
+  review: "seek-idle-chart.svg",        // pendingInteraction 'plan-review'
+  done: "seek-attention.svg",           // completed unseen — celebrate
+  sleeping: "seek-sleeping.svg",
+  carrying: "seek-carrying.svg",        // held; the theme's reactions.drag art
   // ── reactions to being clicked; theme.json's reactions.* ──
-  poke: "seekwhale-notification.svg",        // clickLeft / clickRight
-  annoyed: "seekwhale-error.svg",            // kept poking. The one asset with no
+  poke: "seek-notification.svg",        // clickLeft / clickRight
+  annoyed: "seek-error.svg",            // kept poking. The one asset with no
                                              // session signal at all — a click is
                                              // the only thing that can select it.
   // ── idle flourishes, on a timer; these need no signal at all ──
-  read: "seekwhale-idle-read.svg",
-  coffee: "seekwhale-idle-coffee.svg",
-  yawn: "seekwhale-yawning.svg",
-  spout: "seekwhale-spouting.svg",
+  read: "seek-idle-read.svg",
+  coffee: "seek-idle-coffee.svg",
+  yawn: "seek-yawning.svg",
+  spout: "seek-spouting.svg",
 };
 
 /**
